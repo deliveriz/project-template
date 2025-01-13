@@ -3,9 +3,11 @@
 This project demonstrates how to set up a JavaScript application with ESLint and Prettier for code formatting and linting, Jest for testing, and a GitHub Actions workflow.
 
 ## Getting Started
+
 To recreate this project, follow these steps:
 
 ### 1. Set Up the Project
+
 Ensure you have Node.js installed. Then, initialise a new project:
 
 ```bash
@@ -21,7 +23,8 @@ npm install --save-dev eslint prettier eslint-plugin-prettier eslint-config-pret
 ```
 
 ### 3. Create ESLint Configuration
-Set up ESLint with a configuration file named ```eslint.config.mjs```. Add the following:
+
+Set up ESLint with a configuration file named `eslint.config.mjs`. Add the following:
 
 ```javascript
 import prettier from 'eslint-config-prettier';
@@ -46,8 +49,10 @@ export default [
   },
 ];
 ```
+
 ### 4. Add Prettier Configuration
-Create a ```.prettierrc``` file to define formatting rules:
+
+Create a `.prettierrc` file to define formatting rules:
 
 ```json
 {
@@ -57,7 +62,8 @@ Create a ```.prettierrc``` file to define formatting rules:
 ```
 
 ### 5. Add Scripts to package.json
-Include the following scripts in your ```package.json```:
+
+Include the following scripts in your `package.json`:
 
 ```json
 "scripts": {
@@ -68,7 +74,8 @@ Include the following scripts in your ```package.json```:
 ```
 
 ### 6. Create Application Code
-Add a file named ```math.js``` with this content:
+
+Add a file named `math.js` with this content:
 
 ```javascript
 function addNumbers(a, b) {
@@ -79,7 +86,8 @@ module.exports = { addNumbers };
 ```
 
 ### 7. Write a Test File
-Create a file named ```math.test.js``` to test the function:
+
+Create a file named `math.test.js` to test the function:
 
 ```javascript
 const { addNumbers } = require('./math');
@@ -92,7 +100,8 @@ describe('math.js', () => {
 ```
 
 ### 8. Add a GitHub Actions Workflow
-In the ```.github/workflows directory```, create a file named ```main.yml``` with this content:
+
+In the `.github/workflows directory`, create a file named `main.yml` with this content:
 
 ```yaml
 name: JavaScript Workflow
@@ -108,7 +117,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: '18'
       - name: Install dependencies
         run: npm install
       - name: Run Prettier
@@ -118,11 +127,15 @@ jobs:
       - name: Run tests
         run: npm test
 ```
+
 ### 9. Run Locally
-Format code: ```npm run format```
 
-Lint code: ```npm run lint```
+Format code: `npm run format`
 
-Test code: ```npm test```
+Lint code: `npm run lint`
+
+Test code: `npm test`
+
 ### 10. Push to GitHub
+
 Commit your changes and push to your GitHub repository. The GitHub Actions workflow will run automatically.

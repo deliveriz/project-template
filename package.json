@@ -1,7 +1,7 @@
 {
   "name": "gaute_github_actions",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project demonstrates how to set up a JavaScript application with ESLint and Prettier for code formatting and linting, Jest for testing, and a GitHub Actions workflow.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -24,5 +24,13 @@
     "globals": "^15.14.0",
     "jest": "^29.7.0",
     "prettier": "^3.4.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noroff-backend-2/m1l3-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noroff-backend-2/m1l3-example/issues"
+  },
+  "homepage": "https://github.com/noroff-backend-2/m1l3-example#readme"
 }
